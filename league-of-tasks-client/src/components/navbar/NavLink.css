@@ -1,0 +1,29 @@
+
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--light-primary);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 20px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: var(--light-green);
+  }
+  
+  .btn-Join {
+    margin-left: 20px; 
+  }
+
+  .logout-button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    color: var(--light-primary);
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    color: var(--light-green);
+}

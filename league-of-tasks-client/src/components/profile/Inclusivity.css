@@ -1,0 +1,42 @@
+.container-inclusivity {
+    width: 100%;
+    padding: 0 40px;
+}
+
+.inclusivity-card {
+    background: var(--light-green);
+    border: none;
+    border-radius: 11px;
+    color: var(--dark-primary);
+    margin-top: 15px;
+    margin-bottom: 1.5em;
+    width: 100%;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    vertical-align: center;
+    margin: 5px;
+    padding: 10px;
+    font-family: var(--font-title);
+}
+
+@media (max-width: 480px) {
+    .container-inclusivity {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .section-title {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 365px) {
+    .section-title {
+        font-size: 12px;
+    }
+}

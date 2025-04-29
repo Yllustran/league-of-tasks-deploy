@@ -1,0 +1,25 @@
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem;
+    border-radius: 12px;
+    height: 80vh;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card {
+        max-width: 320px;
+        padding: 1rem;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+/* Responsive */
+@media (max-width: 380px) {
+    .login-card {
+        max-width: 280px;
+    }
+}
+

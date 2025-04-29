@@ -1,0 +1,89 @@
+/* Conteneur principal */
+.contact-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light-green);
+}
+
+/* Titre */
+.contact-container h2 {
+    font-weight: bold;
+    color: var(--dark-primary);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Champ du formulaire */
+.contact-container .form-control {
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* Bouton */
+.contact-btn {
+    background-color: var(--dark-primary);
+    color: var(--light-green);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; 
+    border: none;
+}
+
+.contact-btn:hover {
+    color: var(--light-primary);
+    transform: scale(0.95); 
+    background-color: var(--dark-primary);
+
+
+}
+
+/* ✅ Media Queries pour le Responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 90%; 
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .contact-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact-container .form-control {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .contact-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-container {
+        max-width: 95%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .contact-container h2 {
+        font-size: 1.3rem;
+    }
+
+    .contact-container .form-control {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+
+    .contact-btn  {
+        font-size: 0.85rem;
+        padding: 6px;
+    }
+}

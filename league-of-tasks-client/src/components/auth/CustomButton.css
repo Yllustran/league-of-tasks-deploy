@@ -1,0 +1,19 @@
+
+
+.custom-btn {
+    background-color: var(--light-green);
+    border: none;
+    color: var(--dark-primary);
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Hover */
+.custom-btn:hover {
+    background-color: var(--dark-green);
+    transform: scale(1.02);
+}

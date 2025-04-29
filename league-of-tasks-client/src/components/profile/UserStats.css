@@ -1,0 +1,59 @@
+
+.profile-stats {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 5px 40px; 
+    margin-bottom: 30px;
+}
+
+/* Cartes de stats */
+.stat-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    border-radius: 11px;
+}
+
+
+.stat-card.task {
+    background-color: var(--light-blue);
+}
+
+.stat-card.gold {
+    background-color: var(--light-yellow);
+}
+
+.stat-card.reroll {
+    background: var(--light-red);
+}
+
+
+.stat-label {
+    margin-top: 10px;
+    font-size: 10px;
+    margin-bottom: 2px;
+}
+
+.stat-value {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+@media (max-width: 480px) {
+    .profile-stats {
+        padding: 5px 0px;
+    }
+}
+
+@media (max-width: 365px) {
+    .stat-label {
+        font-size: 8px;
+    }
+
+    .stat-value {
+        font-size: 14px;
+    }
+}

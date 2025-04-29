@@ -1,0 +1,50 @@
+
+.container {
+    max-width: 90%;
+    margin: auto;
+  }
+  
+
+  .invoice-h2 {
+    text-align: center;
+    margin : 40px 0;
+  }
+
+  button {
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  .modal-content {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    border: none!important; 
+    box-shadow: none!important; 
+  }
+
+  .modal-dialog {
+    max-width: 900px;
+    width: 90%;
+    border: none!important; 
+  }
+
+  .modal-backdrop {
+    background-color: var(--light-primary)!important; 
+    opacity: 1 !important; 
+  }
+
+  
+  .modal-body p {
+    margin-bottom: 10px;
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .modal-content {
+      width: 100%;
+    }
+  }
+  

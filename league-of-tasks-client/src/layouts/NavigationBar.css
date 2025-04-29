@@ -1,0 +1,85 @@
+
+/* Hide hamburger button on desktop */
+.navbar-toggler {
+  display: none; 
+}
+
+.navbar {
+  background-color: var(--dark-primary);
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    position: relative; 
+    height: auto;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar-brand {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: auto;
+    display: flex; 
+    align-items: center;
+  }
+
+  .hamburger-btn {
+    position: relative;
+    top: auto;
+    right: auto;
+    z-index: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .navbar-collapse {
+    position: absolute; 
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-color: var(--dark-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transform: translateY(-100%);
+    transition: none !important;
+    overflow: hidden;
+  }
+
+  .navbar-collapse.show {
+    transform: translateY(0);
+    transition: none !important;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-Join {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 8px;
+  }
+}
+

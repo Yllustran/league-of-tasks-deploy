@@ -1,0 +1,72 @@
+/* Global Variables */
+
+:root {
+    /* Fonts */
+    --font-title: 'Bungee', sans-serif;
+    --font-special: 'Press Start 2P', cursive;
+    --font-text: 'Poppins', sans-serif;
+
+    /* Font sizes */
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.8rem;
+    --font-size-h3: 1.5rem;
+    --font-size-h5: 1.2rem;
+
+    /* Colors */
+    --light-green: #28e8a9;
+    --dark-green: #51cda1;
+  
+    --light-blue: #74d1ef;
+    --dark-blue: #6abcD6;
+  
+    --light-red: #ef7474;
+    --dark-red: #e46969;
+  
+    --light-yellow: #ffde59;
+    --dark-yellow: #dcbe45;
+  
+    --light-primary: #ffffff;
+    --dark-primary: #020d3c;
+}
+
+/* Default Font */
+body {
+    font-family: var(--font-text);
+}
+
+/* Typography */
+h1 {
+    font-size: var(--font-size-h1);
+    font-family: var(--font-title);
+}
+  
+h2 {
+    font-size: var(--font-size-h2);
+    font-family: var(--font-title);
+}
+  
+h3 {
+    font-size: var(--font-size-h3);
+    font-family: var(--font-title);
+}
+  
+h5 {
+    font-size: var(--font-size-h5);
+    font-family: var(--font-text);
+}
+
+
+.text-small {
+    font-size: 0.875rem;
+    color: var(--dark-primary); 
+    opacity: 0.7;
+}
+
+.text-small-link {
+    color: var(--dark-primary); 
+    font-weight: bold;
+}
+
+.text-small-link:hover {
+    color: var(--light-green); 
+}

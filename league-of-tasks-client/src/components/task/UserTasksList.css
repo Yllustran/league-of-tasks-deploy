@@ -1,0 +1,81 @@
+.task-container {
+    max-width: 600px; 
+    margin: auto;
+    padding: 16px;
+    background: white;
+}
+
+.task-list {
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 3px solid var(--light-green); /* Separator line */
+}
+
+.task-item:last-child {
+    border-bottom: none; /* No line for the last item */
+}
+
+.task-text {
+    font-size: 16px;
+    color: #001c55;
+    margin: 0;
+    font-weight: 500;
+}
+
+.completed-task {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* Hide the native checkbox input */
+.hidden-checkbox {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-checkbox .form-check-input {
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    border: 2px solid var(--dark-primary);
+    cursor: pointer;
+    transition: background 0.3s, border 0.3s;
+}
+
+/* When the checkbox is checked */
+.custom-checkbox .form-check-input:checked {
+    background-color: var(--light-green);
+    border-color: var(--dark-primary);
+}
+
+.custom-checkbox .form-check-input:hover {
+    opacity: 0.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .task-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .task-text {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,25 @@
+.tooltip-inner {
+    max-width: 350px !important; 
+    padding: 12px;
+    font-size: 14px; 
+    text-align: left;
+    background-color: rgba(30, 30, 30, 0.9); 
+    color: var(--light-primary);  
+    border-radius: 11px; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);  
+  }
+
+  .span-green {
+    color: var(--light-green);
+    font-weight: bold;
+  }
+
+  .tooltip.show {
+    opacity: 1 !important;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  input[type="checkbox"] {
+    accent-color: var(--light-green);
+  }
+  

@@ -1,0 +1,13 @@
+
+.btn-Join {
+    background-color: var(--dark-primary) !important;
+    color: var(--light-green) !important;
+    border-color: var(--light-green) !important;
+    font-weight: bold !important;
+}
+
+.btn-Join:hover {
+    background-color: var(--light-primary) !important;
+    color: var(--dark-primary) !important;
+    border-color: var(--light-primary) !important;
+}

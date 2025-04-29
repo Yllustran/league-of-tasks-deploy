@@ -1,0 +1,128 @@
+.update-profile-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.update_h2 {
+    font-size: 1.8rem;
+    color: var(--dark-primary);
+    max-width: 400px;
+}
+
+.update_h3 {
+    font-size: 1rem!important;
+}
+
+.form-group {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.form-group-title {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.simple_hr {
+    width: 20%;
+    background-color: var(--dark-primary);
+    margin-top: 0;
+    height: 2px;
+}
+
+.Accessibility-check {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.interests-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: left;
+}
+
+.interest-badge {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.interest-badge.selected {
+    background-color: #4caf50;
+    color: white;
+}
+
+.submit-button {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #1abc9c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.submit-button:hover {
+    background-color: #16a085;
+}
+
+.back-arrow-update {
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--dark-primary);
+    margin-right: 10px; 
+    transition: color 0.3s ease-in-out;
+    margin-top: 5px;
+}
+
+.back-arrow-update:hover {
+    color: var(--light-green);
+    background-color: var(--dark-primary);
+    border-radius: 50%;
+    padding: 5px;
+    transform: rotate(-35deg);
+}
+
+.arrow-separator {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+    .Accessibility-check {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .arrow-separator {
+        flex-direction: column;
+    }
+    .back-arrow-update {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .interest-badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+    .Accessibility-check {
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,35 @@
+.container-generate-tasks {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    width: 90%;
+}
+
+.task-manager-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+}
+
+.generate-tasks-btn, .task-box   {
+    background-color: var(--light-green);
+    color: var(--dark-primary);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
+    width: 400px;
+    max-width: 400px;
+    margin: auto;
+    border: none;
+}
+
+.generate-tasks-btn:hover {
+    background-color: var(--dark-green);
+    transform: scale(1.02);
+}
+
+
