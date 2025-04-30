@@ -4,6 +4,8 @@ services:
     build: ./league-of-tasks-api
     ports:
       - 8000:80
+    volumes:
+      - ~/storage:/var/www/app/storage
 
   react-docker:
     container_name: react-docker
@@ -18,3 +20,5 @@ services:
       MYSQL_DATABASE: league-of-tasks
     ports:
       - 3306:3306
+    volumes:
+      - ~/datadir:/var/lib/mysql

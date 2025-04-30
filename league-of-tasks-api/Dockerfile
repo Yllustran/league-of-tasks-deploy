@@ -27,6 +27,8 @@ RUN a2enmod rewrite
  
 RUN chown -R www-data:www-data /var/www/app \ 
     && chmod -R 775 /var/www/app/storage 
+
+RUN chown -R www-data:www-data /var/www/app/storage
  
 # Installation de composer
 # Configurer la variable d'environnement 
@@ -36,3 +38,5 @@ COPY --from=composer:2.6.5 /usr/bin/composer /usr/local/bin/composer
 # Installation des dependences
 COPY composer.json ./ 
 RUN composer install
+
+RUN php artisan storage:link || true
