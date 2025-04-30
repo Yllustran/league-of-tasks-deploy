@@ -2,7 +2,7 @@ const axios = require('axios');
 const { expect } = require('@jest/globals');
 
 const Axios = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: 'http://localhost:8000/api',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json'
@@ -14,8 +14,8 @@ const user = {};
 describe('API - Utilisateur simple', () => {
   beforeAll(async () => {
     await login(user, {
-      email: 'test@test.fr',
-      password: 'Password1234!'
+      email: 'user1@user.com',
+      password: 'password123'
     });
   });
 
@@ -34,7 +34,7 @@ describe('API - Utilisateur simple', () => {
   test('GET /profile - should return user profile', async () => {
     const res = await Axios.get('/profile');
     expect(res.status).toBe(200);
-    expect(res.data.email).toBe('test@test.fr');
+    expect(res.data.email).toBe('user1@user.com');
   });
 
   // ------------------------------------------------------------------------------
