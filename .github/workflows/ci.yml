@@ -5,7 +5,7 @@ on: # specify the build to trigger the automated ci/cd
     branches:
       - "main"
 jobs:
-  docker:
+  tests:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     defaults:
@@ -58,7 +58,7 @@ jobs:
           tags: |
             ghcr.io/yllustran/league-of-tasks-api:latest
             ghcr.io/yllustran/league-of-tasks-api:${{ github.sha }}
-            
+
   build-and-push-image-spa-prod:
     needs:
       - tests
