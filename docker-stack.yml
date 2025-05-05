@@ -1,0 +1,53 @@
+
+
+services:
+  laravel-docker:
+    image: ghcr.io/yllustran/league-of-tasks-api:latest
+    ports:
+      - 8000:80
+    depends_on:
+      - mysql_db
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.laravel-docker.rule=Host(`api.leagueoftasks.fr`)"
+      - "traefik.http.routers.laravel-docker.entrypoints=websecure"
+      - "traefik.http.routers.laravel-docker.tls.certresolver=myresolver"
+
+    react-docker:
+      image: ghcr.io/yllustran/league-of-tasks-client:latest
+    ports:
+      - 8001:80
+    depends_on:
+      - laravel-docker
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.react.docker.rule=Host(`leagueoftasks.fr`)"
+      - "traefik.http.routers.react.docker.entrypoints=websecure"
+      - "traefik.http.routers.react.docker.tls.certresolver=myresolver"
+
+    mysql_db:
+      image: mysql:latest
+      environment:
+        MYSQL_ROOT_PASSWORD: Lolipop61!/
+        MYSQL_DATABASE: league-of-tasks
+      ports:
+        - 3306:3306
+
+  traefik:
+    image: traefik:v3.2
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entryPoints.websecure.address=:443"
+      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
+      - "--certificatesresolvers.myresolver.acme.email=hello@leagueoftasks.fr"
+      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
+    ports:
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/letsencrypt:/letsencrypt"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
