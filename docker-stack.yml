@@ -14,8 +14,8 @@ services:
       - "traefik.http.routers.laravel-docker.entrypoints=websecure"
       - "traefik.http.routers.laravel-docker.tls.certresolver=myresolver"
 
-    react-docker:
-      image: ghcr.io/yllustran/league-of-tasks-client:latest
+  react-docker:
+    image: ghcr.io/yllustran/league-of-tasks-client:latest
     ports:
       - 8001:80
     depends_on:
@@ -27,13 +27,13 @@ services:
       - "traefik.http.routers.react.docker.entrypoints=websecure"
       - "traefik.http.routers.react.docker.tls.certresolver=myresolver"
 
-    mysql_db:
-      image: mysql:latest
-      environment:
-        MYSQL_ROOT_PASSWORD: Lolipop61!/
-        MYSQL_DATABASE: league-of-tasks
-      ports:
-        - 3306:3306
+  mysql_db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: Lolipop61!/
+      MYSQL_DATABASE: league-of-tasks
+    ports:
+      - 3306:3306
 
   traefik:
     image: traefik:v3.2
