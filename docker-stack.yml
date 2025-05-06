@@ -23,9 +23,9 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react.docker.rule=Host(`leagueoftasks.fr`)"
-      - "traefik.http.routers.react.docker.entrypoints=websecure"
-      - "traefik.http.routers.react.docker.tls.certresolver=myresolver"
+      - "traefik.http.routers.react-docker.rule=Host(`leagueoftasks.fr`)"
+      - "traefik.http.routers.react-docker.entrypoints=websecure"
+      - "traefik.http.routers.react-docker.tls.certresolver=myresolver"
 
   mysql_db:
     image: mysql:latest
