@@ -13,6 +13,9 @@ services:
       - "traefik.http.routers.laravel-docker.rule=Host(`api.leagueoftasks.fr`)"
       - "traefik.http.routers.laravel-docker.entrypoints=websecure"
       - "traefik.http.routers.laravel-docker.tls.certresolver=myresolver"
+    volumes:
+      - /root/storage:/var/www/app/storage/app/public
+
 
   react-docker:
     image: ghcr.io/yllustran/league-of-tasks-client:latest
@@ -34,6 +37,8 @@ services:
       MYSQL_DATABASE: league-of-tasks
     ports:
       - 3306:3306
+    volumes:
+      - /root/datadir:/var/lib/mysql
 
   traefik:
     image: traefik:v3.2
