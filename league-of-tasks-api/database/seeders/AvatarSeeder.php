@@ -13,17 +13,17 @@ class AvatarSeeder extends Seeder
         DB::table('avatars')->insert([
             [
                 'avatar_name' => 'Green',
-                'avatar_url' => 'storage/avatars/avatar-green.png',
+                'avatar_url' => 'avatars/avatar-green.png',
                 'level_required' => 0
             ],
             [
                 'avatar_name' => 'Blue',
-                'avatar_url' => 'storage/avatars/avatar-blue.png',
+                'avatar_url' => 'avatars/avatar-blue.png',
                 'level_required' => 0
             ],
             [
                 'avatar_name' => 'Red',
-                'avatar_url' => 'storage/avatars/avatar-red.png',
+                'avatar_url' => 'avatars/avatar-red.png',
                 'level_required' => 0
             ]
         ]);
